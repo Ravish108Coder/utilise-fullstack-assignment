@@ -27,7 +27,7 @@ interface IconProps {
 const Icon: React.FC<IconProps> = ({ name, iconHeight, iconWidth, setSelectedIcon, selectedIcon }) => {
   const IconComponent = icons[name];
   return IconComponent ? <div className='tooltip-container'>
-    <span className="tooltip-text bg-pink-600">{name}</span>
+    <span className='hidden sm:inline'><span className="tooltip-text bg-pink-600">{name}</span></span>
     <img onClick={()=>setSelectedIcon(name)} src={IconComponent} className={`hover:outline outline-2 outline-offset-2 ${name !== selectedIcon && " outline-white "} ${name === selectedIcon && " outline-pink-600 outline "} cursor-pointer bg-blue-500 p-2 rounded-md min-w-[${iconWidth}] min-h-[${iconHeight}]`} alt={name} width={iconWidth} height={iconHeight} /></div> : <span>Icon not found</span>;
 };
 

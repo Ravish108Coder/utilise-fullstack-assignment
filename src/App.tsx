@@ -15,8 +15,9 @@ function App() {
     <div className='flex items-center justify-center cursor-pointer my-4'>
     <img onClick={()=>{
       !open && setOpen(true)
-      }} src={IconComponent} className={`bg-blue-500 p-2 rounded-md hover:outline outline-2 outline-offset-2`} alt={currentIcon!} width={"100px"} height={"100px"} />
+    }} src={IconComponent} className={`bg-blue-500 p-2 rounded-md hover:outline outline-2 outline-offset-2`} alt={currentIcon!} width={"100px"} height={"100px"} />
     </div>
+    <p className='text-white text-center uppercase -mt-2 tracking-wider'>{currentIcon}</p>
     {
       open && (
         <IconPickerComponent rowsInOnePage={5} columnsInOnePage={9} iconHeight='50px' iconWidth='50px' 

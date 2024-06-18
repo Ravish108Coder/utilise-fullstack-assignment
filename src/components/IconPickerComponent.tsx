@@ -61,7 +61,7 @@ const IconPickerComponent = ({
 
     const possibleRows = findMaxRows(low, high, heightOfIcon);
     const possibleIcons = possibleRows * columnsInOnePage;
-    const totalPage = Math.ceil(287 / possibleIcons);
+    const totalPage = Math.ceil(iconNames.length / possibleIcons);
 
     const [selectedIcon, setSelectedIcon] = useState<string | null>(null)
 

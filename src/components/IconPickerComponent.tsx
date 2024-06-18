@@ -76,7 +76,7 @@ const IconPickerComponent = ({
             </div>
             <div
                 style={{gridTemplateRows: `repeat(${rowsInOnePage}, 1fr)`, gridTemplateColumns: `repeat(${columnsInOnePage}, 1fr)`, maxHeight: pickerHeight, maxWidth: pickerWidth}}
-                className={`shadow-lg mx-auto p-4 gap-4 grid`}
+                className={`shadow-lg mx-auto p-1 md:p-4 gap-1 md:gap-4 grid`}
             >
                 {iconNames.slice(possibleIcons * (page - 1), possibleIcons * (page - 1) + possibleIcons).map((iconName, index) => (
                     <Icon key={index} name={iconName} iconHeight={iconHeight} iconWidth={iconWidth} setSelectedIcon = {setSelectedIcon} />

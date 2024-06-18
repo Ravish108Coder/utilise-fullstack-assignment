@@ -8,5 +8,14 @@ export default {
     extend: {},
   },
   plugins: [],
+  options: {
+      safelist: [
+        'grid-rows-3',
+        'grid-cols-4',
+        'max-h-[300px]',
+        'max-w-[400px]',
+        // Add more dynamic class names here as needed
+      ],
+    }
 }
 

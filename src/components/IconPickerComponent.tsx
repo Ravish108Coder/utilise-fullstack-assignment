@@ -75,8 +75,8 @@ const IconPickerComponent = ({
                 <button disabled={page === totalPage} onClick={() => setPage(page + 1)} className="disabled:opacity-60 p-2 bourder-none bg-violet-600 text-white rounded-lg px-4">Next</button>
             </div>
             <div
-                style={{gridTemplateRows: `repeat(${5}, 1fr)`, gridTemplateColumns: `repeat(${9}, 1fr)`, maxHeight: pickerHeight, maxWidth: pickerWidth}}
-                className={`shadow-lg w-[70%] mx-auto p-4 gap-4 grid`}
+                style={{gridTemplateRows: `repeat(${rowsInOnePage}, 1fr)`, gridTemplateColumns: `repeat(${columnsInOnePage}, 1fr)`, maxHeight: pickerHeight, maxWidth: pickerWidth}}
+                className={`shadow-lg mx-auto p-4 gap-4 grid`}
             >
                 {iconNames.slice(possibleIcons * (page - 1), possibleIcons * (page - 1) + possibleIcons).map((iconName, index) => (
                     <Icon key={index} name={iconName} iconHeight={iconHeight} iconWidth={iconWidth} setSelectedIcon = {setSelectedIcon} />

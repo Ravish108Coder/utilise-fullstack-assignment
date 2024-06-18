@@ -71,7 +71,7 @@ const IconPickerComponent = ({
         <>
             <div className="flex items-center justify-center space-x-3">
                 <button disabled={page === 1} onClick={() => setPage(page - 1)} className="disabled:opacity-60 p-2 bourder-none bg-violet-600 text-white rounded-lg px-4">Prev</button>
-                <span className="text-xl">{page}</span>
+                <span className="text-xl text-pink-600 ">{page}</span>
                 <button disabled={page === totalPage} onClick={() => setPage(page + 1)} className="disabled:opacity-60 p-2 bourder-none bg-violet-600 text-white rounded-lg px-4">Next</button>
             </div>
             <div

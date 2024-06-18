@@ -69,10 +69,10 @@ const IconPickerComponent = ({
 
     return (
         <>
-            <div className="flex items-center justify-center space-x-3">
-                <button disabled={page === 1} onClick={() => setPage(page - 1)} className="disabled:opacity-60 p-2 bourder-none bg-violet-600 text-white rounded-lg px-4">Prev</button>
+            <div className="flex items-center justify-center space-x-3 my-4">
+                <button disabled={page === 1} onClick={() => setPage(page - 1)} className="disabled:opacity-60 p-2 bourder-none bg-violet-600 hover:bg-violet-400 text-white rounded-lg px-4">Prev</button>
                 <span className="text-xl text-pink-600 ">{page}</span>
-                <button disabled={page === totalPage} onClick={() => setPage(page + 1)} className="disabled:opacity-60 p-2 bourder-none bg-violet-600 text-white rounded-lg px-4">Next</button>
+                <button disabled={page === totalPage} onClick={() => setPage(page + 1)} className="disabled:opacity-60 p-2 bourder-none bg-violet-600 hover:bg-violet-400 text-white rounded-lg px-4">Next</button>
             </div>
             <div
                 style={{gridTemplateRows: `repeat(${rowsInOnePage}, 1fr)`, gridTemplateColumns: `repeat(${columnsInOnePage}, 1fr)`, maxHeight: pickerHeight, maxWidth: pickerWidth}}
@@ -83,11 +83,11 @@ const IconPickerComponent = ({
                 ))}
             </div>
             <div style={{maxWidth: pickerWidth}} className={`mt-4 w-[70%] mx-auto flex items-center justify-end gap-4`}>
-            <button onClick={() => setOpen(false)} className="p-2 bourder-none bg-red-500 text-white rounded-lg px-4">Cancel</button>
+            <button onClick={() => setOpen(false)} className="p-2 bourder-none bg-red-500 hover:bg-red-300 text-white rounded-lg px-4">Cancel</button>
             <button disabled={selectedIcon === null} onClick={() => {
                 setCurrentIcon(selectedIcon!)
                 setOpen(false)
-            }} className="disabled:opacity-60 p-2 bourder-none bg-violet-600 text-white rounded-lg px-4">Done</button>
+            }} className="disabled:opacity-60 p-2 bourder-none bg-violet-600 hover:bg-violet-400 text-white rounded-lg px-4">Done</button>
             </div>
         </>
     );

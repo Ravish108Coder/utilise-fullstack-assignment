@@ -12,10 +12,10 @@ function App() {
     <h1 className="text-3xl font-bold text-pink-600 text-center">
       Utilize IconPicker Assignment
     </h1>
-    <div className='flex items-center justify-center cursor-pointer my-4'>
+    <div className='flex items-center justify-center my-4'>
     <img onClick={()=>{
       !open && setOpen(true)
-    }} src={IconComponent} className={`bg-blue-500 p-2 rounded-md hover:outline outline-2 outline-offset-2`} alt={currentIcon!} width={"100px"} height={"100px"} />
+    }} src={IconComponent} className={`bg-blue-500 p-2 rounded-md hover:outline outline-2 outline-offset-2 ${!open && "outline-white cursor-pointer"} `} alt={currentIcon!} width={"100px"} height={"100px"} />
     </div>
     <p className='text-white text-center uppercase -mt-2 tracking-wider'>{currentIcon}</p>
     {

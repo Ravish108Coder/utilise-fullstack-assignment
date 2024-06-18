@@ -79,7 +79,7 @@ const IconPickerComponent = ({
                 className={`shadow-lg mx-auto p-1 md:p-4 gap-1 md:gap-4 grid`}
             >
                 {iconNames.slice(possibleIcons * (page - 1), possibleIcons * (page - 1) + possibleIcons).map((iconName, index) => (
-                    <Icon key={index} name={iconName} iconHeight={iconHeight} iconWidth={iconWidth} setSelectedIcon = {setSelectedIcon} />
+                    <Icon key={index} name={iconName} iconHeight={iconHeight} iconWidth={iconWidth} setSelectedIcon = {setSelectedIcon} selectedIcon={selectedIcon} />
                 ))}
             </div>
             <div style={{maxWidth: pickerWidth}} className={`mt-4 w-[70%] mx-auto flex items-center justify-end gap-4`}>

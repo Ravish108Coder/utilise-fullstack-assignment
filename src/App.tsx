@@ -8,7 +8,7 @@ function App() {
   const IconComponent = icons[currentIcon!];
   const [open, setOpen] = useState(false)
   return (
-    <div className='w-full'>
+    <div className='w-full h-screen'>
     <h1 className="text-3xl font-bold text-pink-600 text-center">
       Utilize IconPicker Assignment
     </h1>
